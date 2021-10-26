@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="" />
+    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="adding all config files to gitignore">
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +44,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.17.32" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/client" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -116,8 +121,23 @@
       <workItem from="1635157004709" duration="14407000" />
       <workItem from="1635180688101" duration="2551000" />
       <workItem from="1635195030552" duration="10057000" />
-      <workItem from="1635244214797" duration="7268000" />
+      <workItem from="1635244214797" duration="8001000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1635252273127</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635252273127</updated>
+    </task>
+    <task id="LOCAL-00002" summary="adding all config files to gitignore">
+      <created>1635252361307</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1635252361307</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,5 +161,8 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/backend/client" />
     </ignored-roots>
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="adding all config files to gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding all config files to gitignore" />
   </component>
 </project>
