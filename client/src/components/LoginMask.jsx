@@ -8,6 +8,8 @@ const LoginMask = () => {
     const [pw, setPw] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
     const [accessToken, setAccessToken] = useState("");
+    const [buttonVariant, setButtonVariant] = useState("primary");
+    const [buttonText, setButtonText] = useState("Login");
 
     const loginHandler = async (e) => {
         e.preventDefault();
@@ -25,6 +27,13 @@ const LoginMask = () => {
                 if (data.accessToken) {
                     setLoggedIn(true);
                     setAccessToken(data.accessToken)
+                } if(!data.accessToken){
+                    setButtonVariant("warning");
+                    setButtonText("Wrong username or password, please try again");
+                    setTimeout(() => {
+                        setButtonVariant("primary");
+                        setButtonText("Login");
+                    }, 2000)
                 }
             });
     }
@@ -49,8 +58,8 @@ const LoginMask = () => {
                             onChange={(e) => setPw(e.target.value)}
                         />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
-                        Login
+                    <Button variant={buttonVariant} type="submit">
+                        {buttonText}
                     </Button>
                 </Form>
             }
