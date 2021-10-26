@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/supermancash/pushimpl/issues"
   },
-  "homepage": "https://github.com/supermancash/pushimpl#readme"
+  "homepage": "https://github.com/supermancash/pushimpl#readme",
+  "engines": {
+    "node": "14.15.0"
+  }
 }
