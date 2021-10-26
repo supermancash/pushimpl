@@ -1,6 +1,21 @@
 {
+  "name": "pushimpl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "heroku-prebuild": "cd backend && npm install && cd ../client && yarn",
     "start": "cd backend && npm start"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supermancash/pushimpl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supermancash/pushimpl/issues"
+  },
+  "homepage": "https://github.com/supermancash/pushimpl#readme"
 }
