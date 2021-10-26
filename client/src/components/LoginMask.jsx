@@ -1,7 +1,6 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {useState} from "react";
-import {login} from "../services/auth";
 import PushForm from "./Push";
 
 const LoginMask = () => {
@@ -12,21 +11,22 @@ const LoginMask = () => {
 
     const loginHandler = async (e) => {
         e.preventDefault();
-        await login(user, pw).catch(error => {
-            const resMessage =
-                (error.response &&
-                    error.response.data &&
-                    error.response.data.message) ||
-                error.message ||
-                error.toString();
-            console.log(resMessage);
-        });
-        const item = JSON.parse(localStorage.getItem('user'));
-        console.log(item)
-        if (item.accessToken) {
-            setLoggedIn(true);
-            setAccessToken(item.accessToken)
-        }
+        fetch('/api/auth/signin', {
+            method: 'POST',
+            body: JSON.stringify({
+                user: user,
+                password: pw
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => response.json())
+            .then(data => {
+                if (data.accessToken) {
+                    setLoggedIn(true);
+                    setAccessToken(data.accessToken)
+                }
+            });
     }
 
     return (
