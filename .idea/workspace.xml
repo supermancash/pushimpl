@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="squash! adding push.config">
+    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="showing admin when wrong pw or user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/LoginMask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LoginMask.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/push.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/push.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +36,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="adding_secrets" />
+        <entry key="$PROJECT_DIR$" value="githubmaster" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -139,7 +139,7 @@
       <workItem from="1635157004709" duration="14407000" />
       <workItem from="1635180688101" duration="2551000" />
       <workItem from="1635195030552" duration="10057000" />
-      <workItem from="1635244214797" duration="10683000" />
+      <workItem from="1635244214797" duration="12758000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1635252273127</created>
@@ -204,7 +204,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635254023492</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="cleaning up admin login page">
+      <created>1635255677623</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1635255677623</updated>
+    </task>
+    <task id="LOCAL-00011" summary="showing admin when wrong pw or user">
+      <created>1635256468646</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1635256468646</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +235,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="heroku/master" />
+                        <option value="githubmaster" />
                       </list>
                     </value>
                   </entry>
@@ -246,6 +260,8 @@
     <MESSAGE value="updating package.json in root directory for heroku deploy" />
     <MESSAGE value="adding index.html from client back" />
     <MESSAGE value="adding push.config" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding push.config" />
+    <MESSAGE value="cleaning up admin login page" />
+    <MESSAGE value="showing admin when wrong pw or user" />
+    <option name="LAST_COMMIT_MESSAGE" value="showing admin when wrong pw or user" />
   </component>
 </project>
