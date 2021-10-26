@@ -1,5 +1,5 @@
 /backend/node_modules
-/backend/config/push.config.js
+/backend/config
 
 # dependencies
 /client/node_modules
