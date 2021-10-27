@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
 });
 
 const sendNotificationToAll = (subscribers, title, body, link) => {
-    if (!link.includes("https://") || !link.includes("http://")) link = "https://" + link;
+    if (!link.includes("https://") && !link.includes("http://")) link = "https://" + link;
     let options = {
         title: title,
         body: body,

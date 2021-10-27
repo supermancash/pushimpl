@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="squash! adding push.config" />
+    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="showing admin when wrong pw or user">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/push.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/push.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +36,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="adding_secrets" />
+        <entry key="$PROJECT_DIR$" value="githubmaster" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,7 +62,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="14.15.1" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.32" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/client" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -94,60 +79,26 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -188,8 +139,7 @@
       <workItem from="1635157004709" duration="14407000" />
       <workItem from="1635180688101" duration="2551000" />
       <workItem from="1635195030552" duration="10057000" />
-      <workItem from="1635244214797" duration="10683000" />
-      <workItem from="1635323986310" duration="2992000" />
+      <workItem from="1635244214797" duration="12758000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1635252273127</created>
@@ -254,7 +204,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635254023492</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="cleaning up admin login page">
+      <created>1635255677623</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1635255677623</updated>
+    </task>
+    <task id="LOCAL-00011" summary="showing admin when wrong pw or user">
+      <created>1635256468646</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1635256468646</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +235,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="heroku/master" />
+                        <option value="githubmaster" />
                       </list>
                     </value>
                   </entry>
@@ -296,24 +260,8 @@
     <MESSAGE value="updating package.json in root directory for heroku deploy" />
     <MESSAGE value="adding index.html from client back" />
     <MESSAGE value="adding push.config" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding push.config" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1497" height="291" key="GridCell.Tab.0.bottom" timestamp="1635325974021">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1497" height="291" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1635325974021" />
-    <state width="1497" height="291" key="GridCell.Tab.0.center" timestamp="1635325974021">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1497" height="291" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1635325974021" />
-    <state width="1497" height="291" key="GridCell.Tab.0.left" timestamp="1635325974021">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1497" height="291" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1635325974021" />
-    <state width="1497" height="291" key="GridCell.Tab.0.right" timestamp="1635325974021">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1497" height="291" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1635325974021" />
+    <MESSAGE value="cleaning up admin login page" />
+    <MESSAGE value="showing admin when wrong pw or user" />
+    <option name="LAST_COMMIT_MESSAGE" value="showing admin when wrong pw or user" />
   </component>
 </project>
