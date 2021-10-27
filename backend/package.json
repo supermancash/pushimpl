@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "cd ../client && npm run build && cd ../backend && cross-env NODE_ENV=production node server.js",
-    "dev": "concurrently \"cd ../client && npm start\" \"nodemon server.js\""
+    "start": "cd ../client && npm run build && cd ../backend && node server.js",
+    "dev": "concurrently \"cd ../client && npm start\" \"nodemon server.js\"",
+    "production": "cd ../client && npm run build && cd ../backend && cross-env NODE_ENV=production node server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
