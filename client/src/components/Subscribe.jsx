@@ -3,11 +3,16 @@ import {useEffect, useState} from "react";
 
 const Subscribe = () => {
     const [permission, setPermission] = useState(false);
-    let sw;
+    const [sw, setSw] = useState({});
 
     useEffect(() => {
+        const registersw = async () => {
+            await setSw(await navigator.serviceWorker.register('./sw.js'));
+            console.log(sw);
+        }
+        registersw().catch(err => console.log(err));
         const checkPermission = async () => {
-            sw = await navigator.serviceWorker.ready;
+            await setSw(await navigator.serviceWorker.ready);
             const subscription = await sw.pushManager.getSubscription();
             subscription === null ? setPermission(false) : setPermission(true);
         }
