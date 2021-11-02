@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="push changing or to and">
-      <change afterPath="$PROJECT_DIR$/client/public/bell.png" afterDir="false" />
+    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="changing backend to module">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Default_Changelist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Default_Changelist.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/auth.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/auth.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/push.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/push.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/Admins.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/Admins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/Subscribers.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/Subscribers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/push.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/push.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/subscribers.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/subscribers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/sw.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +132,7 @@
       <workItem from="1635195030552" duration="10057000" />
       <workItem from="1635244214797" duration="13765000" />
       <workItem from="1635852619991" duration="2904000" />
-      <workItem from="1635863402148" duration="1675000" />
+      <workItem from="1635863402148" duration="3335000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1635252273127</created>
@@ -229,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635257871656</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="changing backend to module">
+      <created>1635865237187</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1635865237187</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +270,7 @@
     <MESSAGE value="cleaning up admin login page" />
     <MESSAGE value="showing admin when wrong pw or user" />
     <MESSAGE value="push changing or to and" />
-    <option name="LAST_COMMIT_MESSAGE" value="push changing or to and" />
+    <MESSAGE value="changing backend to module" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing backend to module" />
   </component>
 </project>
