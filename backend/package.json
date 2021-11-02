@@ -18,5 +18,6 @@
     "morgan": "~1.9.1",
     "nodemon": "^2.0.14",
     "web-push": "^3.4.5"
-  }
+  },
+  "type": "module"
 }

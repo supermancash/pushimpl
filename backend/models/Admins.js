@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const schema = new mongoose.Schema({
     user: {type: String, unique: true, required: true},
@@ -8,4 +8,4 @@ const schema = new mongoose.Schema({
 
 const AdminSchema = mongoose.model("Admin", schema);
 
-module.exports = AdminSchema;
+export default AdminSchema;

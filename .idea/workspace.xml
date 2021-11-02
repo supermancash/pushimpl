@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="showing admin when wrong pw or user">
+    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="push changing or to and">
+      <change afterPath="$PROJECT_DIR$/client/public/bell.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/auth.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/auth.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/push.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/push.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/Admins.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/Admins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/Subscribers.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/Subscribers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/push.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/push.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/subscribers.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/subscribers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/sw.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +76,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.32" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/public" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -73,25 +85,15 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2021.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\0\vc\pushimpl\client\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\0\vc\pushimpl\client\public" />
       <recent name="C:\0\vc\pushimpl\backend" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,7 +141,9 @@
       <workItem from="1635157004709" duration="14407000" />
       <workItem from="1635180688101" duration="2551000" />
       <workItem from="1635195030552" duration="10057000" />
-      <workItem from="1635244214797" duration="12758000" />
+      <workItem from="1635244214797" duration="13765000" />
+      <workItem from="1635852619991" duration="2904000" />
+      <workItem from="1635863402148" duration="1675000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1635252273127</created>
@@ -218,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635256468646</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="push changing or to and">
+      <created>1635257871656</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1635257871656</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +273,7 @@
     <MESSAGE value="adding push.config" />
     <MESSAGE value="cleaning up admin login page" />
     <MESSAGE value="showing admin when wrong pw or user" />
-    <option name="LAST_COMMIT_MESSAGE" value="showing admin when wrong pw or user" />
+    <MESSAGE value="push changing or to and" />
+    <option name="LAST_COMMIT_MESSAGE" value="push changing or to and" />
   </component>
 </project>

@@ -1,12 +1,13 @@
-const express = require('express');
-const router = express.Router();
+import express from 'express';
 
-const subscribersRouter = require('./subscribers');
-const pushRouter = require('./push');
-const authRouter = require('./auth');
+import subscribersRouter from './subscribers.js';
+import pushRouter from './push.js';
+import authRouter from './auth.js';
+
+const router = express.Router();
 
 router.use('/subscribers', subscribersRouter);
 router.use('/push', pushRouter);
 router.use('/auth', authRouter);
 
-module.exports = router;
+export default router;

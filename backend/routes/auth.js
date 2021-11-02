@@ -1,9 +1,11 @@
-const express = require('express');
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
-const config = require("../config/auth.config");
+import express from 'express';
+import jwt from "jsonwebtoken";
+import bcrypt from "bcryptjs";
+
+import config from "../config/auth.config.js";
+import AdminSchema from '../models/Admins.js';
+
 const router = express.Router();
-const AdminSchema = require('../models/Admins');
 
 router.post('/signin', async (req, res) => {
     AdminSchema.findOne({
@@ -18,9 +20,6 @@ router.post('/signin', async (req, res) => {
             if (!user) {
                 return res.status(404).send({message: "User Not found."});
             }
-
-            console.log(req.body)
-            console.log(user.password)
 
             const passwordIsValid = bcrypt.compareSync(
                 req.body.password,
@@ -49,11 +48,15 @@ router.post('/signin', async (req, res) => {
 });
 
 router.post('/signup', async (req, res) => {
-    const admin = new AdminSchema({
-        user: req.body.user,
-        password: bcrypt.hashSync(req.body.password, 8)
-    });
-    await admin.save().then(() => res.sendStatus(200));
+    if(req.body.secret===config.secret) {
+        const admin = new AdminSchema({
+            user: req.body.user,
+            password: bcrypt.hashSync(req.body.password, 8)
+        });
+        await admin.save().then(() => res.sendStatus(200));
+    }
+    if(req.body.secret!==config.secret) res.sendStatus(401);
+
 });
 
-module.exports = router;
+export default router;

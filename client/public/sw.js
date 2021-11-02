@@ -5,7 +5,7 @@ self.addEventListener('push', (e) =>{
     urlFromPush = optionsFromPush.url
     let options = {
         body: optionsFromPush.body,
-        icon: './icons/mindblown.png',
+        icon: './bell.png',
         vibrate:[100, 50, 100],
     }
     e.waitUntil(self.registration.showNotification(optionsFromPush.title, options));

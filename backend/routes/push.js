@@ -1,10 +1,12 @@
-const express = require('express');
-const jwt = require("jsonwebtoken");
-const push = require('web-push');
+import express from 'express';
+import jwt from "jsonwebtoken";
+import push from 'web-push';
+
+import config from '../config/auth.config.js';
+import SubscriberSchema from '../models/Subscribers.js';
+import keys from '../config/push.config.js';
+
 const router = express.Router();
-const config = require('../config/auth.config');
-const SubscriberSchema = require('../models/Subscribers');
-const keys = require('../config/push.config');
 
 push.setVapidDetails('mailto:test@test.com', keys.publicKey, keys.privateKey);
 
@@ -22,6 +24,7 @@ router.post('/', async (req, res) => {
         req.userId = decoded.id;
     });
     sendNotificationToAll(await SubscriberSchema.find(), req.body.title, req.body.body, req.body.link);
+    res.sendStatus(200)
 });
 
 const sendNotificationToAll = (subscribers, title, body, link) => {
@@ -36,4 +39,4 @@ const sendNotificationToAll = (subscribers, title, body, link) => {
     }
 }
 
-module.exports = router;
+export default router;

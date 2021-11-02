@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const schema = new mongoose.Schema({
     endpoint: {type: String, unique: true, required: true},
@@ -12,4 +12,4 @@ const schema = new mongoose.Schema({
 
 const SubscriberSchema = mongoose.model("Subscriber", schema);
 
-module.exports = SubscriberSchema;
+export default SubscriberSchema;
