@@ -7,7 +7,8 @@ const Subscribe = () => {
 
 
     const registersw = async () => {
-        await setSw(await navigator.serviceWorker.register('../sw.js'));
+        await setSw(await navigator.serviceWorker.register('sw.js'));
+        if(sw==={}) registersw().catch(err => console.log(err));
         console.log(sw);
     }
     registersw().catch(err => console.log(err));
