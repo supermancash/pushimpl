@@ -9,7 +9,7 @@ const Subscribe = () => {
     const registersw = async () => {
         console.log(path.resolve('sw.js'))
         await setSw(await navigator.serviceWorker.register(path.resolve('sw.js')));
-        if(sw==={}) registersw().catch(err => console.log(err));
+        if (sw === {}) registersw().catch(err => console.log(err));
         console.log(sw);
     }
 
@@ -20,31 +20,33 @@ const Subscribe = () => {
     }
 
     const subscribeHandler = async () => {
-        await registersw().catch(err => console.log(err));
-        await checkPermission().catch(err => console.log(err));
-        if ('PushManager' in window) {
-            await setSw(await navigator.serviceWorker.ready);
-            const push = await sw.pushManager.subscribe({
-                userVisibleOnly: true,
-                applicationServerKey: 'BLu-niPp_sPIzQyEYCyv-nncF824MjY0UPMaGXwm-8PH1FnAiOoQePUshBFogdIA7YYaxnjg8bd2JG8iTJwTSwI'
-            });
+        await registersw().then(async () => {
+            await checkPermission().then(async () => {
+                if ('PushManager' in window) {
+                    await setSw(await navigator.serviceWorker.ready);
+                    const push = await sw.pushManager.subscribe({
+                        userVisibleOnly: true,
+                        applicationServerKey: 'BLu-niPp_sPIzQyEYCyv-nncF824MjY0UPMaGXwm-8PH1FnAiOoQePUshBFogdIA7YYaxnjg8bd2JG8iTJwTSwI'
+                    });
 
-            if (!permission) {
-                await fetch("/api/subscribers", {
-                    method: 'POST',
-                    credentials: 'omit',
-                    mode: 'cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Access-Control-Request-Headers': '*'
-                    },
-                    body: JSON.stringify(push)
-                }).catch((error) => {
-                    console.error('Error:', error);
-                });
-            }
-            setPermission(true)
-        }
+                    if (!permission) {
+                        await fetch("/api/subscribers", {
+                            method: 'POST',
+                            credentials: 'omit',
+                            mode: 'cors',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Access-Control-Request-Headers': '*'
+                            },
+                            body: JSON.stringify(push)
+                        }).catch((error) => {
+                            console.error('Error:', error);
+                        });
+                    }
+                    setPermission(true)
+                }
+            })
+        });
     }
 
     return (

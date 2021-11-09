@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="still trying to fix sw bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/sw.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +145,7 @@
       <workItem from="1635863402148" duration="4105000" />
       <workItem from="1635934161128" duration="2405000" />
       <workItem from="1636361724189" duration="4357000" />
-      <workItem from="1636453289416" duration="7488000" />
+      <workItem from="1636453289416" duration="7829000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1635252273127</created>
@@ -301,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636472166302</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="still trying to fix sw bug">
+      <created>1636472428570</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1636472428570</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

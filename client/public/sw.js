@@ -1,21 +1,21 @@
-let urlFromPush = ""
+let urlFromPush = "";
 
-self.addEventListener('push', (e) =>{
+self.addEventListener('push', (e) => {
     let optionsFromPush = e.data.json()
     urlFromPush = optionsFromPush.url
     let options = {
         body: optionsFromPush.body,
         icon: './bell.png',
-        vibrate:[100, 50, 100],
+        vibrate: [100, 50, 100],
     }
     e.waitUntil(self.registration.showNotification(optionsFromPush.title, options));
-})
+});
 
-self.addEventListener('notificationclick', (e) =>{
+self.addEventListener('notificationclick', (e) => {
     let url = urlFromPush;
     e.notification.close(); // Android needs explicit close.
     e.waitUntil(
-        clients.matchAll({type: 'window'}).then( windowClients => {
+        clients.matchAll({type: 'window'}).then(windowClients => {
             // Check if there is already a window/tab open with the target URL
             for (var i = 0; i < windowClients.length; i++) {
                 var client = windowClients[i];
@@ -30,4 +30,4 @@ self.addEventListener('notificationclick', (e) =>{
             }
         })
     );
-})
+});
