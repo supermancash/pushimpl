@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="still trying to fix sw bug">
-      <change beforePath="$PROJECT_DIR$/client/public/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/sw.js" afterDir="false" />
+    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="finally fixed sw bug">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/subscribers.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/subscribers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Subscribe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Subscribe.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +65,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.32" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/client/public" />
@@ -81,7 +86,7 @@
       <recent name="C:\0\vc\pushimpl\backend" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.dev">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -145,7 +150,7 @@
       <workItem from="1635863402148" duration="4105000" />
       <workItem from="1635934161128" duration="2405000" />
       <workItem from="1636361724189" duration="4357000" />
-      <workItem from="1636453289416" duration="7829000" />
+      <workItem from="1636453289416" duration="14628000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1635252273127</created>
@@ -308,7 +313,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636472428570</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="still trying to fix sw bug">
+      <created>1636472826174</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1636472826174</updated>
+    </task>
+    <task id="LOCAL-00025" summary="finally fixed sw bug">
+      <created>1636475328375</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1636475328375</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,6 +378,7 @@
     <MESSAGE value="trying to fix sw bug in production" />
     <MESSAGE value="adding get point for sw.js" />
     <MESSAGE value="still trying to fix sw bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="still trying to fix sw bug" />
+    <MESSAGE value="finally fixed sw bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="finally fixed sw bug" />
   </component>
 </project>
