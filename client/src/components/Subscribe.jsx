@@ -1,24 +1,22 @@
 import Button from "react-bootstrap/Button";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 const Subscribe = () => {
     const [permission, setPermission] = useState(false);
     const [sw, setSw] = useState({});
 
-    useEffect(() => {
-        const registersw = async () => {
-            await setSw(await navigator.serviceWorker.register('../sw.js'));
-            console.log(sw);
-        }
-        registersw().catch(err => console.log(err));
-        const checkPermission = async () => {
-            await setSw(await navigator.serviceWorker.ready);
-            const subscription = await sw.pushManager.getSubscription();
-            subscription === null ? setPermission(false) : setPermission(true);
-        }
-        checkPermission().catch(err => console.log(err));
-    });
 
+    const registersw = async () => {
+        await setSw(await navigator.serviceWorker.register('../sw.js'));
+        console.log(sw);
+    }
+    registersw().catch(err => console.log(err));
+    const checkPermission = async () => {
+        await setSw(await navigator.serviceWorker.ready);
+        const subscription = await sw.pushManager.getSubscription();
+        subscription === null ? setPermission(false) : setPermission(true);
+    }
+    checkPermission().catch(err => console.log(err));
 
 
     const subscribeHandler = async () => {
@@ -48,7 +46,8 @@ const Subscribe = () => {
 
     return (
         <div>
-            {permission ? <p>You are subscribed!</p> : <Button variant="primary" onClick={subscribeHandler}>Subscribe</Button>}
+            {permission ? <p>You are subscribed!</p> :
+                <Button variant="primary" onClick={subscribeHandler}>Subscribe</Button>}
         </div>
     );
 }
