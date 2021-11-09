@@ -8,6 +8,7 @@ const Subscribe = () => {
 
 
     const registersw = async () => {
+        console.log(path.resolve('sw.js'))
         await setSw(await navigator.serviceWorker.register(path.resolve('sw.js')));
         if(sw==={}) registersw().catch(err => console.log(err));
         console.log(sw);
@@ -16,14 +17,14 @@ const Subscribe = () => {
     const checkPermission = async () => {
         await setSw(await navigator.serviceWorker.ready);
         const subscription = await sw.pushManager.getSubscription();
-        subscription === null ? setPermission(false) : setPermission(true);
+        subscription === null ? checkPermission().catch(err => console.log(err)) : setPermission(true);
     }
     checkPermission().catch(err => console.log(err));
 
 
     const subscribeHandler = async () => {
         if ('PushManager' in window) {
-            setSw(await navigator.serviceWorker.ready);
+            await setSw(await navigator.serviceWorker.ready);
             const push = await sw.pushManager.subscribe({
                 userVisibleOnly: true,
                 applicationServerKey: 'BLu-niPp_sPIzQyEYCyv-nncF824MjY0UPMaGXwm-8PH1FnAiOoQePUshBFogdIA7YYaxnjg8bd2JG8iTJwTSwI'
