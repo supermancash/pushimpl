@@ -16,6 +16,10 @@ app.use('/api', indexRouter);
 
 app.use(express.static(path.resolve('../client/build')));
 
+app.get('/sw.js', (req, res) => {
+    res.sendFile(path.resolve('../client/build/sw.js'));
+})
+
 app.get('*', (req, res) => {
     res.sendFile(path.resolve('../client/build/index.html'));
 });

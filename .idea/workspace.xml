@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="changes for heroku routing">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="trying to fix sw bug in production">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/sw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Subscribe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Subscribe.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/sw.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,12 +78,12 @@
       <recent name="C:\0\vc\pushimpl\client\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\0\vc\pushimpl\client\src" />
       <recent name="C:\0\vc\pushimpl\client\public" />
+      <recent name="C:\0\vc\pushimpl\client\src" />
       <recent name="C:\0\vc\pushimpl\backend" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.start">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,7 +136,7 @@
       <workItem from="1635863402148" duration="4105000" />
       <workItem from="1635934161128" duration="2405000" />
       <workItem from="1636361724189" duration="4357000" />
-      <workItem from="1636453289416" duration="1169000" />
+      <workItem from="1636453289416" duration="2639000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1635252273127</created>
@@ -237,7 +236,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635867365209</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="changing sw route">
+      <created>1636455492659</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1636455492659</updated>
+    </task>
+    <task id="LOCAL-00016" summary="trying to fix sw bug in production">
+      <created>1636456116827</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1636456116827</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +297,8 @@
     <MESSAGE value="push changing or to and" />
     <MESSAGE value="changing backend to module" />
     <MESSAGE value="changes for heroku routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes for heroku routing" />
+    <MESSAGE value="changing sw route" />
+    <MESSAGE value="trying to fix sw bug in production" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying to fix sw bug in production" />
   </component>
 </project>
