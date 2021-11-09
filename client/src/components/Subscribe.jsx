@@ -20,8 +20,8 @@ const Subscribe = () => {
     }
 
     const subscribeHandler = async () => {
-        registersw().catch(err => console.log(err));
-        checkPermission().catch(err => console.log(err));
+        await registersw().catch(err => console.log(err));
+        await checkPermission().catch(err => console.log(err));
         if ('PushManager' in window) {
             await setSw(await navigator.serviceWorker.ready);
             const push = await sw.pushManager.subscribe({
