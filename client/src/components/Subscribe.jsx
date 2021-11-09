@@ -42,11 +42,13 @@ const Subscribe = () => {
                         'Access-Control-Request-Headers': '*'
                     },
                     body: JSON.stringify(push)
+                }).then(() => {
+                    setPermission(true);
                 }).catch((error) => {
                     console.error('Error:', error);
                 });
             }
-            setPermission(true);
+
         }
     }
 

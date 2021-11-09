@@ -1,5 +1,6 @@
 import express from 'express';
-import con from '../dao/mysqldao';
+
+import con from '../dao/mysqldao.js';
 
 const router = express.Router();
 
@@ -19,7 +20,6 @@ router.post('/', async (req, res) => {
           if (err) throw err;
           console.log("Result: " + JSON.stringify(result));
         });
-    con.end();
   });
 
 });
