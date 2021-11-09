@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="changing backend to module">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Default_Changelist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Default_Changelist.xml" afterDir="false" />
+    <list default="true" id="71439726-83a2-479c-a45e-8fbda6ca3274" name="Default Changelist" comment="changes for heroku routing">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/sw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Subscribe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Subscribe.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +70,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2021.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
@@ -78,6 +79,7 @@
       <recent name="C:\0\vc\pushimpl\client\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\0\vc\pushimpl\client\src" />
       <recent name="C:\0\vc\pushimpl\client\public" />
       <recent name="C:\0\vc\pushimpl\backend" />
     </key>
@@ -132,7 +134,10 @@
       <workItem from="1635195030552" duration="10057000" />
       <workItem from="1635244214797" duration="13765000" />
       <workItem from="1635852619991" duration="2904000" />
-      <workItem from="1635863402148" duration="3335000" />
+      <workItem from="1635863402148" duration="4105000" />
+      <workItem from="1635934161128" duration="2405000" />
+      <workItem from="1636361724189" duration="4357000" />
+      <workItem from="1636453289416" duration="1169000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1635252273127</created>
@@ -225,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635865237187</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="changes for heroku routing">
+      <created>1635867365209</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1635867365209</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +283,7 @@
     <MESSAGE value="showing admin when wrong pw or user" />
     <MESSAGE value="push changing or to and" />
     <MESSAGE value="changing backend to module" />
-    <option name="LAST_COMMIT_MESSAGE" value="changing backend to module" />
+    <MESSAGE value="changes for heroku routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes for heroku routing" />
   </component>
 </project>

@@ -7,7 +7,7 @@ const Subscribe = () => {
 
     useEffect(() => {
         const registersw = async () => {
-            await setSw(await navigator.serviceWorker.register('./sw.js'));
+            await setSw(await navigator.serviceWorker.register('../sw.js'));
             console.log(sw);
         }
         registersw().catch(err => console.log(err));
