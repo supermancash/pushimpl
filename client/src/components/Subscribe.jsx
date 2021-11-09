@@ -6,23 +6,22 @@ const Subscribe = () => {
     const [permission, setPermission] = useState(false);
     const [sw, setSw] = useState({});
 
-
     const registersw = async () => {
         console.log(path.resolve('sw.js'))
         await setSw(await navigator.serviceWorker.register(path.resolve('sw.js')));
         if(sw==={}) registersw().catch(err => console.log(err));
         console.log(sw);
     }
-    registersw().catch(err => console.log(err));
+
     const checkPermission = async () => {
         await setSw(await navigator.serviceWorker.ready);
         const subscription = await sw.pushManager.getSubscription();
         subscription === null ? checkPermission().catch(err => console.log(err)) : setPermission(true);
     }
-    checkPermission().catch(err => console.log(err));
-
 
     const subscribeHandler = async () => {
+        registersw().catch(err => console.log(err));
+        checkPermission().catch(err => console.log(err));
         if ('PushManager' in window) {
             await setSw(await navigator.serviceWorker.ready);
             const push = await sw.pushManager.subscribe({
