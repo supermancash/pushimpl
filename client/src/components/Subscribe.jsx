@@ -22,6 +22,7 @@ const Subscribe = () => {
 
     const subscribeHandler = async () => {
         if ('PushManager' in window) {
+            setSw(await navigator.serviceWorker.ready);
             const push = await sw.pushManager.subscribe({
                 userVisibleOnly: true,
                 applicationServerKey: 'BLu-niPp_sPIzQyEYCyv-nncF824MjY0UPMaGXwm-8PH1FnAiOoQePUshBFogdIA7YYaxnjg8bd2JG8iTJwTSwI'
