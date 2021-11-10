@@ -7,6 +7,9 @@ const Subscribe = () => {
     const [sw, setSw] = useState({});
 
     useEffect(() => {
+        registersw().then(() => {
+            checkPermission().catch(err => console.log(err))
+        })
         const checkPermission = async () => {
             await setSw(await navigator.serviceWorker.ready);
             let subscription = null;
@@ -14,9 +17,6 @@ const Subscribe = () => {
             if (sw !== {}) subscription = await sw.pushManager.getSubscription();
             subscription === null ? setPermission(false) : setPermission(true);
         }
-        registersw().then(() => {
-            checkPermission().catch(err => console.log(err))
-        })
     });
 
     const registersw = async () => {
