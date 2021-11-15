@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 const PushForm = (props) => {
     const [title, setTitle] = useState("");
@@ -15,36 +15,33 @@ const PushForm = (props) => {
     const [pushesBtn, setPushesbtn] = useState("Show recent pushes");
     const [cards, setCards] = useState([]);
 
-    useEffect(() => {
-        const getPushes = () => {
-            fetch('api/push/logs', {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'x-access-token': props.accessToken
-                }
-            }).then(res => res.json().then(data => {
-                let cardsArray = [];
-                for (let i = 0; i < data.length; i++) {
-                    cardsArray.unshift(
-                        <Col>
-                            <Card bg="light">
-                                <Card.Body>
-                                    <Card.Title>{data[i].timestamp}</Card.Title>
-                                    <Card.Text>Notification Title: {data[i].msgTitle}</Card.Text>
-                                    <Card.Text>Notification Body: {data[i].msgBody}</Card.Text>
-                                    <Card.Text>Notification onClick link: {data[i].msgOnClick}</Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    );
-                }
-                setCards(cardsArray);
-            }))
-                .catch(err => console.log(err));
-        }
-        getPushes();
-    });
+    const getPushes = () => {
+        fetch('api/push/logs', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'x-access-token': props.accessToken
+            }
+        }).then(res => res.json().then(data => {
+            let cardsArray = [];
+            for (let i = 0; i < data.length; i++) {
+                cardsArray.unshift(
+                    <Col>
+                        <Card bg="light">
+                            <Card.Body>
+                                <Card.Title>{data[i].timestamp}</Card.Title>
+                                <Card.Text>Notification Title: {data[i].msgTitle}</Card.Text>
+                                <Card.Text>Notification Body: {data[i].msgBody}</Card.Text>
+                                <Card.Text>Notification onClick link: {data[i].msgOnClick}</Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                );
+            }
+            setCards(cardsArray);
+        }))
+            .catch(err => console.log(err));
+    }
 
 
     const pushHandler = (e) => {
@@ -67,6 +64,7 @@ const PushForm = (props) => {
     const toggleShowing = () => {
         setShowingLastPushes(!showingLastPushes);
         showingLastPushes ? setPushesbtn("Show recent pushes") : setPushesbtn("Back to push form");
+        getPushes();
     }
 
     return (
