@@ -24,19 +24,13 @@ router.post('/', async (req, res) => {
         req.userId = decoded.id;
     });
 
-    con.connect((err) => {
-        if (err) console.log(err);
-        con.query(
-            "select * from subscribers"
-            ,
-
-            async (err, result) => {
-                if (err) throw err;
-                sendNotificationToAll(result, req.body.title, req.body.body, req.body.link);
-            });
-    });
-
-
+    con.query(
+        "select * from subscribers"
+        ,
+        async (err, result) => {
+            if (err) throw err;
+            sendNotificationToAll(result, req.body.title, req.body.body, req.body.link);
+        });
     res.sendStatus(200)
 });
 

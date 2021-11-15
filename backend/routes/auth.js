@@ -3,59 +3,57 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 
 import config from "../config/auth.config.js";
-import AdminSchema from '../models/Admins.js';
+import con from '../dao/mysqldao.js';
 
 const router = express.Router();
 
 router.post('/signin', async (req, res) => {
-    AdminSchema.findOne({
-        username: req.body.username
-    }, 'password')
-        .exec((err, user) => {
-            if (err) {
-                res.status(500).send({message: err});
-                return;
-            }
+    con.query(
+        "select * from admins where username='" + req.body.user + "';"
+        ,
+        (err, result) => {
+            if (err) res.sendStatus(500);
+            console.log("Result: " + JSON.stringify(result));
 
-            if (!user) {
-                return res.status(404).send({message: "User Not found."});
-            }
+            if (result.length === 0) res.status(404).send({message: "User Not found."});
+
+            console.log(result[0].encryptedpw)
 
             const passwordIsValid = bcrypt.compareSync(
                 req.body.password,
-                user.password
+                result[0].encryptedpw
             );
-
 
             if (!passwordIsValid) {
                 return res.status(401).send({
                     accessToken: null,
-                    message: "Invalid Password!"
+                    message: "Invalid Password"
                 });
             }
 
-            const token = jwt.sign({id: user.id}, config.secret, {
+            const token = jwt.sign({id: result[0].username}, config.secret, {
                 expiresIn: 86400 // 24h
             });
 
             res.status(200).send({
-                id: user._id,
-                username: user.username,
+                username: result[0].username,
                 accessToken: token
             });
         });
-
 });
 
 router.post('/signup', async (req, res) => {
-    if(req.body.secret===config.secret) {
-        const admin = new AdminSchema({
-            user: req.body.user,
-            password: bcrypt.hashSync(req.body.password, 8)
-        });
-        await admin.save().then(() => res.sendStatus(200));
+    if (req.body.secret === config.secret) {
+        con.query(
+            "insert into admins values('" + req.body.user + "', '" + bcrypt.hashSync(req.body.password, 8) + "');"
+            ,
+            (err, result) => {
+                if (err) res.sendStatus(500);
+                console.log("Result: " + JSON.stringify(result));
+            });
+        res.sendStatus(200);
     }
-    if(req.body.secret!==config.secret) res.sendStatus(401);
+    if (req.body.secret !== config.secret) res.sendStatus(401);
 
 });
 

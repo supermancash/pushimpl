@@ -7,7 +7,7 @@
 import app from './app.js';
 import debug from 'debug';
 import http from 'http';
-import mongoose from 'mongoose';
+import con from "./dao/mysqldao.js";
 
 /**
  * Get port from environment and store in Express.
@@ -16,17 +16,25 @@ import mongoose from 'mongoose';
 const port = normalizePort(process.env.PORT || '3001');
 app.set('port', port);
 
-let uri;
-process.env.NODE_ENV === "production" ?
-    uri = "mongodb+srv://supermancash:x.psVy33eer7T%40Y@pushnotifications.erof5.mongodb.net/subscribers_db?retryWrites=true&w=majority"
-    :
-    uri = "mongodb://localhost:27017/subscribers_db";
-
-mongoose.connect(
-    uri,
-    {useNewUrlParser: true, useUnifiedTopology: true},
-    (err) => console.log(err)
-);
+con.connect((err) => {
+    if (err) console.log(err);
+    con.query(
+        "create table if not exists subscribers(" +
+        "endpoint varchar(200) primary key, " +
+        "expirationTime char(10), " +
+        "p256dhkey varchar(90), " +
+        "authkey varchar(25)" +
+        "); " +
+        "create table if not exists admins(" +
+        "username varchar(15) primary key, " +
+        "encryptedpw varchar(60)" +
+        ");"
+        ,
+        (err, result) => {
+            if (err) throw err;
+            console.log("Result: " + JSON.stringify(result));
+        });
+});
 
 // mongo user:
 //  name: supermancash
