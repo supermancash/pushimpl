@@ -13,11 +13,7 @@ router.post('/signin', async (req, res) => {
         ,
         (err, result) => {
             if (err) res.sendStatus(500);
-            console.log("Result: " + JSON.stringify(result));
-
             if (result.length === 0) res.status(404).send({message: "User Not found."});
-
-            console.log(result[0].encryptedpw)
 
             const passwordIsValid = bcrypt.compareSync(
                 req.body.password,

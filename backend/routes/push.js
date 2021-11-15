@@ -5,6 +5,7 @@ import push from 'web-push';
 import config from '../config/auth.config.js';
 import keys from '../config/push.config.js';
 import con from "../dao/mysqldao.js";
+import sendNotificationToAll from "../services/sendToAll.js";
 
 const router = express.Router();
 
@@ -25,38 +26,28 @@ router.post('/', async (req, res) => {
     });
 
     con.query(
-        "select * from subscribers"
+        "select * from subscribers;" +
+        "insert into pushes (msgTitle, msgBody, msgOnClick) values ('" +
+        req.body.title + "', '" +
+        req.body.body + "', '" +
+        req.body.link +
+        "');"
         ,
         async (err, result) => {
             if (err) throw err;
-            sendNotificationToAll(result, req.body.title, req.body.body, req.body.link);
+            sendNotificationToAll(result[0], req.body.title, req.body.body, req.body.link);
         });
     res.sendStatus(200)
 });
 
-const sendNotificationToAll = (subscribersSQLformat, title, body, link) => {
-    if (!link.includes("https://") && !link.includes("http://")) link = "https://" + link;
-    let options = {
-        title: title,
-        body: body,
-        url: link
-    }
-    let subscribers = [];
-    for (let i = 0; i < subscribersSQLformat.length; i++) {
-        const subscriber = {
-            endpoint: subscribersSQLformat[i].endpoint,
-            expirationTime: null,
-            keys: {
-                p256dh: subscribersSQLformat[i].p256dhkey,
-                auth: subscribersSQLformat[i].authkey
-            }
-        }
-        subscribers.push(subscriber)
-    }
-
-    for (let i = 0; i < subscribers.length; i++) {
-        push.sendNotification(subscribers[i], JSON.stringify(options));
-    }
-}
+router.get('/logs', (req, res) => {
+    con.query(
+        "select * from pushes;"
+        ,
+        (err, result) => {
+            if(err) res.sendStatus(500);
+            res.send(JSON.stringify(result));
+        });
+});
 
 export default router;

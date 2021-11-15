@@ -28,11 +28,18 @@ con.connect((err) => {
         "create table if not exists admins(" +
         "username varchar(15) primary key, " +
         "encryptedpw varchar(60)" +
+        ");" +
+        "create table if not exists pushes" +
+        "(" +
+        "    pushID     int auto_increment primary key," +
+        "    timestamp timestamp default current_timestamp on update current_timestamp," +
+        "    msgTitle   varchar(50)," +
+        "    msgBody    varchar(300)," +
+        "    msgOnClick varchar(1000)" +
         ");"
         ,
-        (err, result) => {
+        (err) => {
             if (err) throw err;
-            console.log("Result: " + JSON.stringify(result));
         });
 });
 
