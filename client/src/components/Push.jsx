@@ -26,7 +26,7 @@ const PushForm = (props) => {
             }).then(res => res.json().then(data => {
                 let cardsArray = [];
                 for (let i = 0; i < data.length; i++) {
-                    cardsArray.push(
+                    cardsArray.unshift(
                         <Col>
                             <Card bg="light">
                                 <Card.Body>
