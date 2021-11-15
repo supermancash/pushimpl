@@ -1,6 +1,9 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Stack from "react-bootstrap/Stack";
 import {useState} from "react";
+
 import PushForm from "./Push";
 
 const LoginMask = () => {
@@ -43,7 +46,9 @@ const LoginMask = () => {
             {loggedIn ?
                 <PushForm accessToken={accessToken}/>
                 :
-                <Form onSubmit={(event => loginHandler(event))}>
+                <Container>
+                    <br/>
+                    <Form onSubmit={(event => loginHandler(event))}>
                     <Form.Group className="mb-3" controlId="formBasicUsername">
                         <Form.Control
                             type="text"
@@ -58,10 +63,14 @@ const LoginMask = () => {
                             onChange={(e) => setPw(e.target.value)}
                         />
                     </Form.Group>
-                    <Button variant={buttonVariant} type="submit">
-                        {buttonText}
-                    </Button>
+                        <Stack>
+                            <Button className="ms-auto" variant={buttonVariant} type="submit">
+                                {buttonText}
+                            </Button>
+                        </Stack>
                 </Form>
+                </Container>
+
             }
         </>
     );
