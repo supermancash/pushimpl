@@ -44,7 +44,7 @@ const PushForm = (props) => {
                 .catch(err => console.log(err));
         }
         getPushes();
-    }, [props.accessToken]);
+    });
 
 
     const pushHandler = (e) => {
