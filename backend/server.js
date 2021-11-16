@@ -1,13 +1,11 @@
-#!/usr/bin/env node
-
-/**
- * Module dependencies.
- */
-
 import app from './app.js';
 import debug from 'debug';
 import http from 'http';
 import con from "./dao/mysqldao.js";
+
+/*
+    FILE DESCRIPTION: file for creating http server and running app.js
+ */
 
 /**
  * Get port from environment and store in Express.
@@ -15,6 +13,10 @@ import con from "./dao/mysqldao.js";
 
 const port = normalizePort(process.env.PORT || '3001');
 app.set('port', port);
+
+/**
+ * Connect to mysql database
+ */
 
 con.connect((err) => {
     if (err) console.log(err);
@@ -42,10 +44,6 @@ con.connect((err) => {
             if (err) throw err;
         });
 });
-
-// mongo user:
-//  name: supermancash
-//  pw: x.psVy33eer7T@Y
 
 /**
  * Create HTTP server.

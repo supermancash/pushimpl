@@ -7,7 +7,38 @@ import con from '../dao/mysqldao.js';
 
 const router = express.Router();
 
+/*
+    FILE DESCRIPTION: <host>/api/auth route for handling requests regarding authentication
+ */
+
+/**
+ * Post endpoint for creating a new user (only with master server pw <auth.config.js>),
+ * frontend connection not yet implemented
+ */
+
+router.post('/signup', async (req, res) => {
+    if (req.body.secret === config.secret) {
+        con.query(
+            "insert into admins values('" + req.body.user + "', '" + bcrypt.hashSync(req.body.password, 8) + "');"
+            ,
+            (err, result) => {
+                if (err) res.sendStatus(500);
+                console.log("Result: " + JSON.stringify(result));
+            });
+        res.sendStatus(200);
+    }
+    if (req.body.secret !== config.secret) res.sendStatus(401);
+
+});
+
+/**
+ * Post endpoint for logging in from the frontend and receiving an access-token
+ */
+
 router.post('/signin', async (req, res) => {
+    /**
+     * Checking whether the given details were correct
+     */
     con.query(
         "select * from admins where username='" + req.body.user + "';"
         ,
@@ -36,21 +67,6 @@ router.post('/signin', async (req, res) => {
                 accessToken: token
             });
         });
-});
-
-router.post('/signup', async (req, res) => {
-    if (req.body.secret === config.secret) {
-        con.query(
-            "insert into admins values('" + req.body.user + "', '" + bcrypt.hashSync(req.body.password, 8) + "');"
-            ,
-            (err, result) => {
-                if (err) res.sendStatus(500);
-                console.log("Result: " + JSON.stringify(result));
-            });
-        res.sendStatus(200);
-    }
-    if (req.body.secret !== config.secret) res.sendStatus(401);
-
 });
 
 export default router;
